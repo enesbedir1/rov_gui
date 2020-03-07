@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>rov_gui</class>
+ <widget class="QMainWindow" name="rov_gui">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1089</width>
+    <height>804</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ITUROV GUI 2020</string>
+  </property>
+  <widget class="QWidget" name="main_gl">
+   <layout class="QGridLayout" name="gridLayout" columnstretch="80,0">
+    <item row="0" column="1">
+     <layout class="QGridLayout" name="rightside_gl" rowstretch="120,10,20,40">
+      <item row="0" column="0">
+       <widget class="QTabWidget" name="main_tw">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="TASKS">
+         <attribute name="title">
+          <string>TASKS</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_2" rowstretch="60,30,10,30,0,0,0">
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="subwaycar_gb">
+            <property name="title">
+             <string>subway car</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_6" columnstretch="100,0">
+             <item row="3" column="1">
+              <widget class="QLabel" name="backs_st_lb">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLabel" name="lefts_st_lb">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="rights_st_lb">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QLabel" name="fronts_st_lb">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QRadioButton" name="thirths_rb">
+               <property name="text">
+                <string>back surface</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QPushButton" name="tpicos_pb">
+               <property name="text">
+                <string>take pic of surface</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QRadioButton" name="tops_rb">
+               <property name="text">
+                <string>top surface</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLabel" name="tops_st_rb">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QRadioButton" name="fifths_rb">
+               <property name="text">
+                <string>front surface</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QRadioButton" name="seconds_rb">
+               <property name="text">
+                <string>right surface</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QRadioButton" name="fourths_rb">
+               <property name="text">
+                <string>left surface</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
+              <widget class="QPushButton" name="createphotom_pb">
+               <property name="text">
+                <string>create photomastic</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <layout class="QHBoxLayout" name="subwaycarhs_hl" stretch="200,0">
+               <item>
+                <widget class="QSlider" name="subwaycar_hs">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="subwaycarhs_sb"/>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QGroupBox" name="keyboard_gb">
+            <property name="title">
+             <string>keyboard shortcuts</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QCheckBox" name="gripper_cb">
+               <property name="text">
+                <string>gripper</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="microrov_cb">
+               <property name="text">
+                <string>microrov</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <layout class="QGridLayout" name="camera_gl" rowstretch="0,10,10,10,10" columnstretch="0,0,0,0">
+            <item row="1" column="1" colspan="2">
+             <widget class="QLabel" name="recordtime_lb">
+              <property name="font">
+               <font>
+                <pointsize>18</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border-color: rgb(85, 0, 127);
+border: 2px solid;
+
+</string>
+              </property>
+              <property name="text">
+               <string>0:00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QPushButton" name="bottomcam_pb">
+              <property name="text">
+               <string>bottom camera</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QPushButton" name="startstop_pb">
+              <property name="text">
+               <string>start-stop record</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QPushButton" name="frontcam_pb">
+              <property name="text">
+               <string>front camera</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QPushButton" name="takephoto_pb">
+              <property name="text">
+               <string>take photo</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QPushButton" name="closecam_pb">
+              <property name="text">
+               <string>close camera</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <widget class="QPushButton" name="mivrorovcam_pb">
+              <property name="text">
+               <string>microROV camera</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" rowspan="5">
+             <spacer name="camera_vs2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="3" rowspan="5">
+             <spacer name="camera_vs1">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0">
+           <widget class="QGroupBox" name="mapping_gb">
+            <property name="title">
+             <string>mapping</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_4">
+             <item row="0" column="0">
+              <widget class="QPushButton" name="fly_pb">
+               <property name="text">
+                <string>fly autonomously</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QPushButton" name="fly2_pb">
+               <property name="text">
+                <string>fly auto alt.</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QPushButton" name="createmap2_pb">
+               <property name="text">
+                <string>create map alt.</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QPushButton" name="createmap_pb">
+               <property name="text">
+                <string>create map</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0" colspan="2">
+              <layout class="QHBoxLayout" name="mappinghs_hl" stretch="0,0">
+               <item>
+                <widget class="QSlider" name="mapping_hs">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="mappinghs_sb"/>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="INFO">
+         <attribute name="title">
+          <string>INFO</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="0" column="0">
+           <widget class="QLabel" name="info_label">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#0055ff;&quot;&gt;-Communication&lt;/span&gt;&lt;span style=&quot; color:#0055ff;&quot;&gt;: &lt;/span&gt;&lt;/p&gt;&lt;p&gt;Araç zevk çubuğu(joystick) bağlantısı &lt;/p&gt;&lt;p&gt;ve araç haberleşme bağlantı kontrolü&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;-Photograhp:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Dikdörtgenler prizmasının açılımı görevi&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#00aa00;&quot;&gt;-Autonomous:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Otonom görevler &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ffff00;&quot;&gt;-Video_Record:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Coral reef görevi&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#00ffff;&quot;&gt;-Gripper&lt;/span&gt;&lt;span style=&quot; color:#00ffff;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Gripper görevleri &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="counterstart_pb">
+        <property name="text">
+         <string>start</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLCDNumber" name="counter_lcd"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="ROV_LOGO_lb">
+        <property name="text">
+         <string>ROV_LOGO</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="leftside_gl" rowstretch="80,20">
+      <item row="0" column="0">
+       <widget class="QGroupBox" name="camera_gb">
+        <property name="title">
+         <string>camera</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout" stretch="90">
+         <item>
+          <widget class="QLabel" name="cam_label">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <layout class="QVBoxLayout" name="warnings_vl" stretch="20,80">
+        <item>
+         <widget class="QLabel" name="warnings_lb">
+          <property name="text">
+           <string>WARNINGS</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="warnings_st_lb">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>mappinghs_sb</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapping_hs</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1026</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>971</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>subwaycarhs_sb</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>subwaycar_hs</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1017</x>
+     <y>395</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>951</x>
+     <y>397</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mapping_hs</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mappinghs_sb</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>860</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1030</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>subwaycar_hs</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>subwaycarhs_sb</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>850</x>
+     <y>398</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1015</x>
+     <y>402</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
