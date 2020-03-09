@@ -392,7 +392,22 @@ class Ui_rov_gui(object):
         self.start_photomastic_pb_2.clicked.connect(self.f_start_photomastic_pb_2)
         self.tpicos_pb.clicked.connect(self.f_tpicos_pb)
         self.stop_photomastic_pb.clicked.connect(self.f_stop_photomastic_pb)
-
+        self.palette = QtGui.QPalette()
+        app.setStyle('Fusion')
+        palette = QtGui.QPalette()
+        self.palette.setColor(QtGui.QPalette.Window, QtGui.QColor(53, 53, 53))
+        self.palette.setColor(QtGui.QPalette.WindowText, QtCore.Qt.white)
+        self.palette.setColor(QtGui.QPalette.Base, QtGui.QColor(15, 15, 15))
+        self.palette.setColor(QtGui.QPalette.AlternateBase, QtGui.QColor(53, 53, 53))
+        self.palette.setColor(QtGui.QPalette.ToolTipBase, QtCore.Qt.white)
+        self.palette.setColor(QtGui.QPalette.ToolTipText, QtCore.Qt.white)
+        self.palette.setColor(QtGui.QPalette.Text, QtCore.Qt.white)
+        self.palette.setColor(QtGui.QPalette.Button, QtGui.QColor(53, 53, 53))
+        self.palette.setColor(QtGui.QPalette.ButtonText, QtCore.Qt.white)
+        self.palette.setColor(QtGui.QPalette.BrightText, QtCore.Qt.red)
+        self.palette.setColor(QtGui.QPalette.Highlight, QtGui.QColor(142, 45, 197).lighter())
+        self.palette.setColor(QtGui.QPalette.HighlightedText, QtCore.Qt.black)
+        app.setPalette(self.palette)
     # Definitions of buttons functions
     def setImage(self, image):
         self.cam_label.setPixmap(QtGui.QPixmap.fromImage(image))
