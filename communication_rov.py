@@ -18,21 +18,21 @@ for i in range(0, 45):
     pwm_data.append(0)
 
 for i in range(a, 45):
-    if (i == 25):
+    if (i == 42):
         continue
     GPIO.setup(i, GPIO.OUT)
     pwm[i] = GPIO.PWM(i, PWM_FREQ)
     pwm[i].start(0)
 
 for i in range(a, 45):
-    if (i == 25):
+    if (i == 42):
         continue
     pwm[i].ChangeDutyCycle(50)
 
 
 class Tcp():
     def __init__(self):
-        self.host = "127.0.0.1"
+        self.host = "192.168.2.1"
         self.port = 5555
         self.buffer_size = 1024
         self.start = time.time()
@@ -103,23 +103,24 @@ while True:
     if flag == 255:
         if function == 5:
             if data1 == 10:
-                device_data = 1500
+                device_data = 70
                 device_id = 5
             elif data1 == 20:
-                device_data = 1500
+                device_data = 70
                 device_id = 6
             elif data1 == 30:
-                device_data = 1500
+                device_data = 70
                 device_id = 7
             elif data1 == 40:
-                device_data = 1500
+                device_data = 70
                 device_id = 8
         elif function == 4:
             if data1 == 10:
-                device_data = 1500
+                device_data = 70
                 device_id = 9
+                pwm[5].ChangeDutyCycle(70)
             elif data1 == 20:
-                device_data = 1500
+                device_data = 70
                 device_id = 10
 
 

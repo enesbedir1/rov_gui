@@ -18,7 +18,9 @@ def merge(flag,number,incoming_data):
     return data
 
 def packing_joy(button):
-    if button == 2:
+    if button == -1:
+        return merge(0,0,0)
+    elif button == 2:
         return merge(255, 5, 10)
     elif button == 3:
         return merge(255, 5, 20)

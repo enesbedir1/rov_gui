@@ -84,14 +84,14 @@ class MainThread(QtCore.QThread):
         self.s = Server(port=5555)
         self.s.setupConnection()
         ui.rovKeys = []
+        time_limit = time.time()
 
         while True:
             # print(self.s.connection)
             if self.s.new_conn:
                 ui.rovKeys = []
                 self.s.new_conn = False
-
-
+                time_limit = time.time()
 
             # if not self.gripper_cb.isChecked():
             #     ui.joy.pressed_buttons = []
@@ -100,21 +100,24 @@ class MainThread(QtCore.QThread):
             if ui.rovKeys:
                 key = ui.rovKeys.pop(0)
                 self.s.datasend(packing(key))
-
+                time_limit = time.time()
 
             if ui.joy.pressed_buttons:
                 button = ui.joy.pressed_buttons.pop(0)
                 self.s.datasend(packing_joy(button))
+                time_limit = time.time()
+
+            if time.time() - time_limit > 0.05:
+                self.s.datasend(packing_joy(-1))
+                time_limit = time.time()
+
 
 class MikroThread(QtCore.QThread):
     def run(self):
 
         # TCP
-        print("check 1")
         self.s = Server(port=5567)
-        print("check 2")
         self.s.setupConnection()
-        print("check 3")
         ui.microKeys = []
 
         while True:
